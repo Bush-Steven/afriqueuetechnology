@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import logo from "@/assets/afriqueue-logo.jpeg.asset.json";
 
 const links = [
   { to: "/", label: "Home" },
@@ -17,7 +18,7 @@ export function Navbar() {
     <header className="sticky top-0 z-40 border-b border-border/60 bg-background/80 backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         <Link to="/" className="flex items-center gap-2">
-          <div className="grid h-9 w-9 place-items-center rounded-lg bg-gradient-brand text-brand-foreground font-bold shadow-elegant">A</div>
+          <img src={logo.url} alt="AfriQueue logo" width={36} height={36} className="h-9 w-9 rounded-lg object-contain" />
           <span className="font-display text-lg font-bold text-primary">AfriQueue</span>
         </Link>
         <nav className="hidden md:flex items-center gap-7">
