@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Mail, Phone, MapPin, Globe } from "lucide-react";
+import logo from "@/assets/afriqueue-logo.jpeg.asset.json";
 
 export function Footer() {
   return (
@@ -7,7 +8,7 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-6 py-14 grid gap-10 md:grid-cols-4">
         <div>
           <div className="flex items-center gap-2 mb-4">
-            <div className="grid h-9 w-9 place-items-center rounded-lg bg-gradient-brand font-bold">A</div>
+            <img src={logo.url} alt="AfriQueue logo" width={36} height={36} className="h-9 w-9 rounded-lg bg-white object-contain p-0.5" />
             <span className="font-display text-lg font-bold">AfriQueue Technologies</span>
           </div>
           <p className="text-sm text-primary-foreground/70">
@@ -35,10 +36,10 @@ export function Footer() {
         <div>
           <h4 className="font-semibold mb-3 text-accent">Contact</h4>
           <ul className="space-y-2 text-sm text-primary-foreground/75">
-            <li className="flex items-center gap-2"><MapPin className="h-4 w-4" /> Nairobi, Kenya</li>
-            <li className="flex items-center gap-2"><Phone className="h-4 w-4" /> 0722 581 557</li>
-            <li className="flex items-center gap-2"><Mail className="h-4 w-4" /> support@afriqueue.com</li>
-            <li className="flex items-center gap-2"><Globe className="h-4 w-4" /> afriqueue.com</li>
+            <li className="flex items-center gap-2"><MapPin className="h-4 w-4" /><span>Nairobi, Kenya</span></li>
+            <li className="flex items-center gap-2"><Phone className="h-4 w-4" /><span>0722 581 557</span></li>
+            <li className="flex items-center gap-2"><Mail className="h-4 w-4" /><span>support@afriqueue.com</span></li>
+            <li className="flex items-center gap-2"><Globe className="h-4 w-4" /><span>afriqueue.com</span></li>
           </ul>
         </div>
       </div>
