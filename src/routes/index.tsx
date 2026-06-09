@@ -49,34 +49,47 @@ function Home() {
       {/* HERO COVER */}
       <section className="relative bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 pt-6">
-          <img
-            src={cover.url}
-            alt="AfriQueue Technologies — Smart Queue Management System. Better Service. Shorter Waits. Happier Clients."
-            width={1600}
-            height={820}
-            className="w-full h-auto rounded-2xl shadow-elegant"
-          />
-        </div>
-        <div className="mx-auto max-w-7xl px-6 pt-8 pb-4 text-center">
-          <span className="inline-flex items-center gap-2 rounded-full border border-brand/20 bg-brand/5 px-3 py-1 text-xs font-medium text-brand">
-            <Sparkles className="h-3 w-3" /> Powered by intelligence · Driven by service
-          </span>
-          <h1 className="mx-auto mt-5 max-w-3xl text-3xl md:text-5xl font-bold leading-tight text-primary">
-            Transforming Businesses Through{" "}
-            <span className="bg-gradient-brand bg-clip-text text-transparent">
-              Smart Technology Solutions
-            </span>
-          </h1>
-          <p className="mx-auto mt-5 max-w-2xl text-lg text-muted-foreground">
-            Software, IT, CCTV, cybersecurity, websites, branding & digital marketing — for organizations across Kenya.
-          </p>
-          <div className="mt-7 flex flex-wrap justify-center gap-4">
-            <Link to="/contact" className="inline-flex items-center gap-2 rounded-md bg-gradient-brand px-6 py-3 font-semibold text-brand-foreground shadow-elegant transition-transform hover:scale-[1.02]">
-              Request a Demo <ArrowRight className="h-4 w-4" />
-            </Link>
-            <Link to="/services" className="inline-flex items-center gap-2 rounded-md border border-border bg-card px-6 py-3 font-semibold text-primary hover:bg-muted">
-              Explore Services
-            </Link>
+          <div className="relative overflow-hidden rounded-2xl shadow-elegant">
+            <img
+              src={cover.url}
+              alt="AfriQueue Technologies — Smart Queue Management System. Better Service. Shorter Waits. Happier Clients."
+              width={1600}
+              height={820}
+              className="w-full h-auto"
+            />
+            {/* Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/85 via-primary/55 to-transparent" />
+            <div className="absolute inset-0 flex items-center">
+              <div className="w-full md:w-3/5 px-5 sm:px-8 md:px-12 lg:px-16 text-primary-foreground">
+                <span className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-3 py-1 text-[10px] sm:text-xs font-semibold backdrop-blur">
+                  <Sparkles className="h-3 w-3 text-accent" /> POWERED BY INTELLIGENCE · DRIVEN BY SERVICE
+                </span>
+                <h1 className="mt-3 sm:mt-5 text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.05] drop-shadow-lg">
+                  Smart Technology.{" "}
+                  <span className="bg-gradient-to-r from-accent to-white bg-clip-text text-transparent">
+                    Better Service.
+                  </span>{" "}
+                  Happier Clients.
+                </h1>
+                <p className="mt-2 sm:mt-4 hidden sm:block max-w-xl text-sm md:text-lg text-primary-foreground/90">
+                  Queue management, software, IT, CCTV, cybersecurity & digital marketing — built for businesses across Kenya.
+                </p>
+                <div className="mt-4 sm:mt-7 flex flex-wrap gap-2 sm:gap-4">
+                  <Link
+                    to="/contact"
+                    className="inline-flex items-center gap-2 rounded-md bg-gradient-brand px-4 sm:px-6 py-2.5 sm:py-3 text-xs sm:text-base font-semibold text-brand-foreground shadow-elegant transition-transform hover:scale-[1.03]"
+                  >
+                    Request a Free Demo <ArrowRight className="h-3 w-3 sm:h-4 sm:w-4" />
+                  </Link>
+                  <Link
+                    to="/services"
+                    className="inline-flex items-center gap-2 rounded-md border border-white/40 bg-white/10 px-4 sm:px-6 py-2.5 sm:py-3 text-xs sm:text-base font-semibold text-white backdrop-blur hover:bg-white/20"
+                  >
+                    Explore Solutions
+                  </Link>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
