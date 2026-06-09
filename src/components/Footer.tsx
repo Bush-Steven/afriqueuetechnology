@@ -44,7 +44,7 @@ export function Footer() {
         </div>
       </div>
       <div className="border-t border-white/10 py-5 text-center text-xs text-primary-foreground/60">
-        © {new Date().getFullYear()} AfriQueue Technologies. All rights reserved.
+        © 2015 AfriQueue Technologies. All rights reserved.
       </div>
     </footer>
   );
