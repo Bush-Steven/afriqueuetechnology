@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Sparkles } from "lucide-react";
 import logo from "@/assets/afriqueue-logo.jpeg.asset.json";
+import cover from "@/assets/afriqueue-cover.jpeg.asset.json";
 import svcSoftware from "@/assets/svc-software.jpg";
 import svcIt from "@/assets/svc-it.jpg";
 import svcCctv from "@/assets/svc-cctv.jpg";
@@ -17,7 +18,7 @@ export const Route = createFileRoute("/")({
       { name: "description", content: "Software systems, IT infrastructure, cybersecurity, digital marketing, and branding for hospitals, schools, banks, and businesses." },
       { property: "og:title", content: "AfriQueue Technologies" },
       { property: "og:description", content: "Transforming businesses through smart technology solutions across Kenya." },
-      { property: "og:image", content: logo.url },
+      { property: "og:image", content: cover.url },
     ],
   }),
   component: Home,
@@ -45,33 +46,35 @@ const pins: Pin[] = [
 function Home() {
   return (
     <>
-      {/* HERO */}
-      <section className="relative overflow-hidden bg-gradient-hero text-primary-foreground">
-        <div className="relative mx-auto max-w-7xl px-6 py-20 md:py-28 text-center">
+      {/* HERO COVER */}
+      <section className="relative bg-white">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 pt-6">
           <img
-            src={logo.url}
-            alt="AfriQueue Technologies logo"
-            width={160}
-            height={160}
-            className="mx-auto h-32 w-32 md:h-40 md:w-40 rounded-2xl bg-white p-3 shadow-elegant object-contain"
+            src={cover.url}
+            alt="AfriQueue Technologies — Smart Queue Management System. Better Service. Shorter Waits. Happier Clients."
+            width={1600}
+            height={820}
+            className="w-full h-auto rounded-2xl shadow-elegant"
           />
-          <span className="mt-6 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-3 py-1 text-xs font-medium backdrop-blur">
-            <Sparkles className="h-3 w-3 text-accent" /> Powered by intelligence · Driven by service
+        </div>
+        <div className="mx-auto max-w-7xl px-6 pt-8 pb-4 text-center">
+          <span className="inline-flex items-center gap-2 rounded-full border border-brand/20 bg-brand/5 px-3 py-1 text-xs font-medium text-brand">
+            <Sparkles className="h-3 w-3" /> Powered by intelligence · Driven by service
           </span>
-          <h1 className="mx-auto mt-5 max-w-3xl text-4xl md:text-6xl font-bold leading-tight">
+          <h1 className="mx-auto mt-5 max-w-3xl text-3xl md:text-5xl font-bold leading-tight text-primary">
             Transforming Businesses Through{" "}
-            <span className="bg-gradient-to-r from-accent to-white bg-clip-text text-transparent">
+            <span className="bg-gradient-brand bg-clip-text text-transparent">
               Smart Technology Solutions
             </span>
           </h1>
-          <p className="mx-auto mt-6 max-w-2xl text-lg text-primary-foreground/80">
+          <p className="mx-auto mt-5 max-w-2xl text-lg text-muted-foreground">
             Software, IT, CCTV, cybersecurity, websites, branding & digital marketing — for organizations across Kenya.
           </p>
-          <div className="mt-8 flex flex-wrap justify-center gap-4">
+          <div className="mt-7 flex flex-wrap justify-center gap-4">
             <Link to="/contact" className="inline-flex items-center gap-2 rounded-md bg-gradient-brand px-6 py-3 font-semibold text-brand-foreground shadow-elegant transition-transform hover:scale-[1.02]">
               Request a Demo <ArrowRight className="h-4 w-4" />
             </Link>
-            <Link to="/services" className="inline-flex items-center gap-2 rounded-md border border-white/30 bg-white/5 px-6 py-3 font-semibold backdrop-blur hover:bg-white/10">
+            <Link to="/services" className="inline-flex items-center gap-2 rounded-md border border-border bg-card px-6 py-3 font-semibold text-primary hover:bg-muted">
               Explore Services
             </Link>
           </div>
