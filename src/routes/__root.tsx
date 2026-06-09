@@ -14,6 +14,7 @@ import { reportLovableError } from "../lib/lovable-error-reporting";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
 import { ChatBot } from "../components/ChatBot";
+import { FloatingContact } from "../components/FloatingContact";
 
 function NotFoundComponent() {
   return (
@@ -89,6 +90,7 @@ function RootComponent() {
         <main className="flex-1"><Outlet /></main>
         <Footer />
         <ChatBot />
+        <FloatingContact />
       </div>
     </QueryClientProvider>
   );
